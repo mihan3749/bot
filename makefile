@@ -1,5 +1,5 @@
 CXX = clang++
-CXXFLAGS = -std=c++17 -Iinclude/ -O2
+CXXFLAGS = -std=c++17 -Iinclude/ -g
 CXXLIBS = -lTgBot -lboost_system -lssl -lcrypto -lpthread -lpcre
 
 SRC_DIR = src

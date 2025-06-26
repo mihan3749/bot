@@ -575,16 +575,16 @@ bool hdl_list_appointments(const std::shared_ptr<const Chat>& chat,
 			std::to_string(appos.size()) + "\n\n";
 		for (int i = from; i < to; ++i) {
 			const auto& a = appos[i];
-			if (i == tmp.display_appo)
-				text += "<b>";
-
 			text += std::to_string(i + 1) + ")\n";
+			if (i == tmp.display_appo)
+				text += "<u>";
+
 			text += format_appointment(tm(), a->speciality->title,
 				a->doctor->full_name, a->clinic->address,
 					a->time.from, "    ");
 
 			if (i == tmp.display_appo)
-				text += "</b>";
+				text += "</u>";
 
 			text += "\n\n";
 		}
